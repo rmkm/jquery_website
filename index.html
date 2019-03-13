@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>Executing a Function on Click Event in jQuery</title>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<style type="text/css">
-    p{
-        padding: 20px;
-        font: 20px sans-serif;
-        background: khaki;
-    }
-</style>
-<script type="text/javascript">
-$(document).ready(function(){
-    $("p").click(function(){
-        $(this).slideUp();
-    });
-});
-</script>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <title>ghost</title>
 </head>
+
 <body>
-    <p>Click on me and I'll disappear.</p>
-    <p>Click on me and I'll disappear.</p>
-    <p>Click on me and I'll disappear.</p>
+    <p>Click me and I disappear</p>
+    <script>
+        $(function() {
+            $('p').click(
+                function() {
+                    $(this).text("AAAAAhhhh");
+                    $(this).fadeOut('slow');
+                }
+            );
+        });
+        $(function(){
+            $('p').mouseover(function () { $(this).text("No please don't");});
+        });
+    </script>
 </body>
-</html>                 
+
+</html>
